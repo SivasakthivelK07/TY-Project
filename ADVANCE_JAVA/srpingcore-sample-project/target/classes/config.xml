@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="org.tys.jspiders.scsp.dao.Student" name="student">
+		<constructor-arg name="id" value="101"></constructor-arg>
+		<constructor-arg name="name" value="siva"></constructor-arg>
+		<constructor-arg name="email" value="siva@gmail.com"></constructor-arg>
+		<constructor-arg ref="cource"></constructor-arg>
+	</bean>
+	<bean class="org.tys.jspiders.scsp.dao.Cource" name="cource">
+		<constructor-arg name="courceName" value="java"></constructor-arg>
+		<constructor-arg name="fee" value="35000"></constructor-arg>
+	</bean>
+
+</beans>
